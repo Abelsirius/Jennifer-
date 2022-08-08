@@ -1,29 +1,67 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>♥</title>
+    <title>Pito jiijiji</title>
 </head>
 <body>
-    <div class="content">
-
-        <img src="./fondo.jpg"/>
-        <div class="text_inicial">
-            <h2>Te Wuaamoo Jennifer <br/>♥♥♥♥♥</h2>
+    <video src="./words.mp4"></video>
+    <div class="background">
+        <div class="content_img_bg">
+            <div class="img_bx">
+                <img  src="./poster1.jpg" width="100%"/>
+            </div>
+            <div class="img_bx">
+                <img  src="./usImg.jpg" width="100%"/>
+            </div>
+            <div class="img_bx">
+                <img  src="./usImg2.jpg" width="100%"/>
+            </div>
+            <div class="img_bx">
+                <img  src="./usImg3.jpg" width="100%"/>
+            </div>
         </div>
-        <ul class="content_iniciales">
-        <h1><b>Eres</b><li>J</li><b>usto lo que necesitaba ♥</b></h1>
-          <h1><li>E</li><b>eres mi mundo</b></h1>
-          <h1><b></b><li>N</li><b>o puedo dejar de pensarte</b></h1>
-          <h1><b></b><li>N</li><b>o se describir </b></h1>
-          <h1><b>Lo</b><li>I</li><b>mpresionante que eres</b></h1>
-          <h1><b>Lo</b><li>F</li><b>antastica</b></h1>
-          <h1><b>Lo</b><li>E</li><b>special para este cojudo</b></h1>
-          <h1><b>Amo verte</b><li>R</li><b>eirte nunca dejes de hacerlo ♥</b></h1>
-        </ul>
+         <div class="content_words">
+           <h1> ♥ Feliz Aniversario ♥</h1>
+           
+          <div class="paly_audio">
+            <h2>El "por que" te amo tanto</h2>
+            <div class="content_icon">
+                <i class="ri-play-fill"></i>
+            </div>
+          </div>
+         </div>
     </div>
-    
+
+   
+    <script>
+        let play = document.querySelector('.content_icon');
+        let vid = document.querySelector('video')
+        let i = document.querySelector('i')
+        let h2 = document.querySelector('h2')
+        
+        
+        const playvid = () =>{
+            
+            if(vid.paused){
+                vid.play()
+                i.className = 'ri-pause-line';
+
+                h2.textContent = '....'
+                h2.classList.add('active');
+            }else{
+                vid.pause()
+                h2.textContent = 'El "por que" te amo tanto'
+                i.className = 'ri-play-fill';
+                h2.classList.remove('active');
+            }
+        }
+        
+        play.addEventListener('click',playvid)
+    </script>
 </body>
 </html>
